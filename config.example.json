@@ -1,0 +1,25 @@
+{
+  "invoice": {
+    "count": 1
+  },
+  "customers": [
+    {
+      "name": "",
+      "siret": "",
+      "website": "",
+      "tva": "",
+      "address": ""
+    }
+  ],
+  "company": "",
+  "contact": "",
+  "address": "",
+  "siret": "",
+  "iban": "",
+  "bic": "",
+  "tva": "",
+  "phone": "",
+  "mail": "",
+  "website": "",
+  "tjm": 0
+}
