@@ -20,7 +20,10 @@ const getNumberOfInvoice = () => {
       : count >= 100 && count < 1000
       ? `00${count}`
       : `0${count}`;
-  //TODO: réécrire le fichier config.json pour ajouter 1 au compteur de invoice
+
+  const data = JSON.parse(fs.readFileSync(path.join(process.cwd(), "config.json"), "utf8"));
+  const newData = {...data, invoice: {count: data.invoice.count + 1}};
+  fs.writeFileSync(path.join(process.cwd(), "config.json"), JSON.stringify(newData));
   return `F${moment().format("YY")}${number}`;
 };
 
@@ -98,5 +101,5 @@ const generatePDF = async (answers) => {
 };
 
 module.exports = {
-  generatePDF,
+  generatePDF
 };

@@ -2,7 +2,7 @@ const inquirer = require("inquirer");
 const moment = require("moment");
 moment.locale("fr");
 const config = require("./config.json");
-const { generatePDF } = require("./helpers/Invoice");
+const { generatePDF, getNumberOfInvoice } = require("./helpers/Invoice");
 
 const questions = [
   {
