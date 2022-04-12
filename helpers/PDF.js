@@ -1,5 +1,6 @@
 const PDFOptions = {
   width: "1125px",
+  height: "1591px",
   displayHeaderFooter: false,
   margin: {
     top: "125px",
