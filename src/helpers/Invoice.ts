@@ -35,7 +35,6 @@ const getNumberOfInvoice = (): string => {
 
 /**
  * Retourne les informations du client depuis le fichier de configuration
- * @param {string} name
  */
 const getCustomer = (name: string) => {
   return config.customers.find((customer) => customer.name === name);
@@ -60,7 +59,7 @@ export const generatePDF = async (answers: Answers) => {
 
   const data = {
     nbrInvoice: getNumberOfInvoice(),
-    dateInvoice: moment().format("DD/MM/YYYY"),
+    dateInvoice: answers.isCustomDate ? answers.customDate : moment().format("DD/MM/YYYY"),
     // user
     company: config.company,
     contact: config.contact,
